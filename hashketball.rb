@@ -121,25 +121,76 @@ def game_hash
 
 end
 
-def good_practices
+def num_points_scored(name)
+  array = []
   game_hash.each do |location, team_data|
-    #are you ABSOLUTELY SURE what 'location' and 'team data' are? use binding.pry to find out!
-    binding.pry
-      team_data.each do |attribute, data|
-        #are you ABSOLUTELY SURE what 'attribute' and 'team data' are? use binding.pry to find out!
-        binding.pry
-
-        #what is 'data' at each loop through out .each block? when will the following line of code work and when will it break?
-        data.each do |data_item|
-            binding.pry
+    team_data.each do |team_attribute, team_attribute_data|
+      if team_attribute == :players
+        team_attribute_data.each do |player, player_stat|
+            if player == name
+              player_stat.each do |stat, stat_data|
+                if stat == :num_points_scored
+                  array << stat_data
+              end
+            end
+          end
+        end
       end
     end
   end
+  array.join.to_i
 end
 
-good_practices
+def shoe_size(name)
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_attribute_data|
+      if team_attribute == :players
+        team_attribute_data.each do |player, player_stat|
+            if player == name
+              player_stat.each do |stat, stat_data|
+                if stat == :shoe
+                  array << stat_data
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  array.join.to_i
+end
 
+def team_colors(team)
+ array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_attribute_data|
+      if team_attribute == :colors
+        team_attribute_data.each do |color|
+                  array << color
+                end
+              end
+            end
+          end
+array
+end
 
+def team_names
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_attribute_data|
+      if team_attribute == :team_name
+          array << team_attribute_data
+                end
+              end
+            end
+array
+end
 
-
-
+def player_numbers(team)
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_attribute_data|
+      if team_attribute == :team_name
+        if team_attribute_data == team
+      team_attribute_data. each do |
