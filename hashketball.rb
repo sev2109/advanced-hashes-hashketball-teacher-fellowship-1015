@@ -224,7 +224,7 @@ def big_shoe_rebounds
           player_data.delete_if { |player_attribute, player_attribute_data|
             player_attribute != :shoe
             }
-          puts player_attribute_data
+          puts player_data
         end
       end
     end

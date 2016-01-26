@@ -101,7 +101,7 @@ def jeff_method
     :origin => ["Shaolin", "China/Taiwan"],
     },
   :talents => {
-    :survived => ["malaria 3 times", "slammed to the ground and bribed by cops", "hunter HS debate team"],
+    :survived => ["malaria 3 times", "slammed to the ground and asked for a bribe by cops", "hunter HS debate team"],
     :other => ["writing code tutorials really fast", "forgiving typos which cause unintended consequences"],
     },
   :attributes => {
