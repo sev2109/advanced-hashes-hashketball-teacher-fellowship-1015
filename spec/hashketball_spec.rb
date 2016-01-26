@@ -95,7 +95,7 @@ describe 'hashketball' do
       {
         :number => 4,
         :shoe => 18,
-        :points => 10,
+        :num_points_scored => 10,
         :rebounds => 1,
         :assists => 1,
         :steals => 2,
@@ -108,7 +108,7 @@ describe 'hashketball' do
       {
         :number => 0,
         :shoe => 16,
-        :points => 12,
+        :num_points_scored => 12,
         :rebounds => 4,
         :assists => 7,
         :steals => 7,
@@ -121,7 +121,7 @@ describe 'hashketball' do
       {
         :number => 2,
         :shoe => 14,
-        :points => 24,
+        :num_points_scored => 24,
         :rebounds => 12,
         :assists => 12,
         :steals => 4,
@@ -134,7 +134,7 @@ describe 'hashketball' do
       {
         :number => 8,
         :shoe => 15,
-        :points => 33,
+        :num_points_scored => 33,
         :rebounds => 3,
         :assists => 2,
         :steals => 1,
@@ -147,7 +147,7 @@ describe 'hashketball' do
       {
         :number => 33,
         :shoe => 15,
-        :points => 6,
+        :num_points_scored => 6,
         :rebounds => 12,
         :assists => 12,
         :steals => 22,
@@ -160,7 +160,7 @@ describe 'hashketball' do
       {
         :number => 0,
         :shoe => 16,
-        :points => 22,
+        :num_points_scored => 22,
         :rebounds => 12,
         :assists => 12,
         :steals => 3,
@@ -173,7 +173,7 @@ describe 'hashketball' do
       {
         :number => 30,
         :shoe => 14,
-        :points => 12,
+        :num_points_scored => 12,
         :rebounds => 12,
         :assists => 12,
         :steals => 12,
@@ -186,7 +186,7 @@ describe 'hashketball' do
       {
         :number => 11,
         :shoe => 17,
-        :points => 17,
+        :num_points_scored => 17,
         :rebounds => 19,
         :assists => 10,
         :steals => 3,
@@ -199,7 +199,7 @@ describe 'hashketball' do
       {
         :number => 1,
         :shoe => 19,
-        :points => 26,
+        :num_points_scored => 26,
         :rebounds => 12,
         :assists => 6,
         :steals => 3,
@@ -212,7 +212,7 @@ describe 'hashketball' do
       {
         :number => 31,
         :shoe => 15,
-        :points => 19,
+        :num_points_scored => 19,
         :rebounds => 2,
         :assists => 2,
         :steals => 4,

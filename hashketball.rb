@@ -164,15 +164,13 @@ end
 def team_colors(team)
  array = []
   game_hash.each do |location, team_data|
-    team_data.each do |team_attribute, team_attribute_data|
-      if team_attribute == :colors
-        team_attribute_data.each do |color|
-                  array << color
-                end
-              end
-            end
-          end
-array
+    team_data.each do |team_attribute, team_basic_info|
+        if team_basic_info == team
+         array << team_data[:colors]
+        end
+    end
+  end
+  array.flatten
 end
 
 def team_names
@@ -181,16 +179,56 @@ def team_names
     team_data.each do |team_attribute, team_attribute_data|
       if team_attribute == :team_name
           array << team_attribute_data
-                end
               end
-            end
-array
+           end
+       end
+    array
 end
 
 def player_numbers(team)
   array = []
   game_hash.each do |location, team_data|
-    team_data.each do |team_attribute, team_attribute_data|
-      if team_attribute == :team_name
-        if team_attribute_data == team
-      team_attribute_data. each do |
+    team_data.each do |team_attribute, team_basic_info|
+        if team_basic_info == team
+          team_data[:players].each do |player, player_info|
+            array << player_info[:number]
+          end
+        end
+    end
+  end
+  array
+end
+
+def player_stats(player_name)
+array =[]
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_basic_info|
+      if team_attribute == :players
+        team_basic_info.each do |player, player_data|
+           if player == player_name
+            array << player_data
+          end
+        end
+      end
+    end
+  end
+  array.pop
+end
+
+def big_shoe_rebounds
+  array = []
+  game_hash.each do |location, team_data|
+    team_data.each do |team_attribute, team_basic_info|
+      if team_attribute == :players
+        team_basic_info.each do |player, player_data|
+          player_data.delete_if { |player_attribute, player_attribute_data|
+            player_attribute != :shoe
+            }
+          puts player_attribute_data
+        end
+      end
+    end
+  end
+end
+
+big_shoe_rebounds
