@@ -216,19 +216,30 @@ array =[]
 end
 
 def big_shoe_rebounds
-  array = []
-  game_hash.each do |location, team_data|
-    team_data.each do |team_attribute, team_basic_info|
-      if team_attribute == :players
-        team_basic_info.each do |player, player_data|
-          player_data.delete_if { |player_attribute, player_attribute_data|
-            player_attribute != :shoe
-            }
-          puts player_data
-        end
-      end
-    end
-  end
+  home_players = game_hash[:home][:players]
+  away_players = game_hash[:away][:players]
+  all_players = home_players.merge(away_players)
+  big_shoe_player = all_players.max_by {|player_name, player_attribute| player_attribute[:shoe]}
+  big_shoe_player[1][:rebounds]
+  #   puts big_shoe_player
+#       array << player_attribute_data[:shoe]
+#      if player_attribute_data[:shoe]
+#        player_attribute.key(array.max) == player_biggest_shoes
+#      end
+#     end
+#   end
+#    puts array.max
+
 end
 
 big_shoe_rebounds
+
+#      if team_attribute == :players
+#        team_basic_info.each do |player, player_data|
+#          player_data.each do |player_attribute, player_attribute_data|
+#            if player_attribute == :shoe
+#              array << player_attribute_data
+#            end
+#          end
+#        end
+#      end
